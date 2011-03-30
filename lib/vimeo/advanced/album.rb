@@ -49,6 +49,11 @@ module Vimeo
       create_api_method :set_title,
                         "vimeo.albums.setTitle",
                         :required => [:album_id, :title]
+                        
+      # Retrieve a list of watch later videos
+      create_api_method :get_watch_later,
+                        "vimeo.albums.getWatchLater",
+                        :optional => [:page, :per_page, :full_response, :password]      
 
     end # Album
   end # Advanced
